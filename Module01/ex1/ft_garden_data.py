@@ -5,8 +5,10 @@ class Plant:
         self.name = name
         self.height = height
         self.age = age
+
     def show(self) -> None:
-            print (f"{self.name}: {self.height}cm, {self.age} days old")
+        print(f"{self.name}: {self.height}cm, {self.age} days old")
+
 
 if __name__ == "__main__":
     rose = Plant("Rose", 25, 30)

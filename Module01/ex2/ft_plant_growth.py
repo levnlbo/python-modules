@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 
 class Plant:
-    def __init__(self, name: str, height: float, age: int, growth_rate: float = 0.8) -> None:
+    def __init__(self, name: str,
+                 height: float, age: int, growth_rate: float = 0.8) -> None:
         self.name = name
         self.height = height
         self.age = age
@@ -16,8 +17,9 @@ class Plant:
     def age_one_day(self) -> None:
         self.age += 1
 
+
 if __name__ == "__main__":
-    rose = Plant("Rose" , 25.0, 30)
+    rose = Plant("Rose", 25.0, 30)
 
     print("=== Garden Plant Growth ===")
     rose.show()

@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 
 class Plant:
-    def __init__(self, name: str, height: float, age: int, growth_rate: float = 0.8) -> None:
+    def __init__(self, name: str,
+                 height: float, age: int, growth_rate: float = 0.8) -> None:
         self.name = name
         self.growth_rate = growth_rate
         self._height: float = 0.0
@@ -11,10 +12,10 @@ class Plant:
 
     def get_height(self) -> float:
         return self._height
-    
+
     def get_age(self) -> int:
         return self._age
-    
+
     def set_height(self, height: float) -> None:
         if height < 0:
             print(f"{self.name}: Error, height can't be negative")
@@ -31,17 +32,18 @@ class Plant:
 
     def show(self) -> None:
         print(f"{self.name}: {self._height}cm, {self._age} days old")
-    
+
     def grow(self) -> None:
-         self._height = round(self._height + self.growth_rate, 1)
-    
+        self._height = round(self._height + self.growth_rate, 1)
+
     def age_one_day(self) -> None:
         self._age += 1
 
+
 if __name__ == "__main__":
-    print ("=== Garden Security System ===")
+    print("=== Garden Security System ===")
     rose = Plant("Rose", 15.0, 10)
-    print(f"Plant created: ", end="")
+    print("Plant created: ", end="")
     rose.show()
     print()
 
@@ -54,6 +56,6 @@ if __name__ == "__main__":
     rose.set_age(-5)
     print("Age update rejected")
     print()
- 
-    print(f"Current state: ", end="")
+
+    print("Current state: ", end="")
     rose.show()
